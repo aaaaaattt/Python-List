@@ -45,4 +45,35 @@ class ArrayList:
             if(self.array[i]>max):      
                 max = self.array[i]     
         
-        return max        
+        return max
+    
+    def findMinMax(self) :
+        if(self.isEmpty()):   
+            return (-1,-1)
+        
+        max=0                 
+        min=999999999999
+
+        for j in range(0,self.size) :  
+            if(self.array[j]<min):      
+                min=self.array[j]     
+
+        for i in range(0,self.size) :  
+            if(self.array[i]>max):      
+                max=self.array[i]
+
+        return (min,max)
+    
+
+
+
+a = ArrayList(3)
+a.insert(0,1)
+a.insert(1,3)
+a.insert(2,4)
+
+b = ArrayList(4)
+b.insert(0,2)
+b.insert(1,3)
+b.insert(2,6)
+b.insert(3,7)
